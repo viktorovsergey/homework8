@@ -24,10 +24,9 @@ public class Main {
         int total = 0;
         int month = 1;
         while (total < totalMoney) {
-            total = total + total / 100;
             total = total + salary;
-            month = month + 1;
             System.out.println("Месяц " + month + " сумма накоплений равна " + total);
+            month = month + 1;
         }
 
 
@@ -62,26 +61,27 @@ public class Main {
 
     public static void task4() {
         int percent = 7;
-        int totalMoney = 15_000;
+        double totalMoney = 15_000;
         int maxMoney = 12_000_000;
-        int year = 1;
-        for (; totalMoney <= maxMoney;  year++ ) {
+        int month = 1;
+        for (; totalMoney <= maxMoney;  month++ ) {
+            System.out.printf("Сумма накоплений "+ month + " месяца равна " +"%.2f",totalMoney);
+            System.out.println();
             totalMoney = totalMoney + (totalMoney * percent / 100);
-            System.out.println("Сумма накоплений " + year + " месяца равна " + totalMoney);
-
         }
 
     }
 
     public static void task5() {
         int percent = 7;
-        int totalMoney = 15_000;
+        double totalMoney = 15_000;
         int maxMoney = 12_000_000;
-        int year = 1;
-        for (; totalMoney <= maxMoney; year++ ) {
+        int month = 1;
+        for (; totalMoney <= maxMoney; month++ ) {
             totalMoney = totalMoney + (totalMoney * percent / 100);
-            if (year % 6 == 0) {
-                System.out.println("Сумма накоплений " + year + " месяца равна " + totalMoney);
+            if (month % 6 == 0) {
+                System.out.printf("Сумма накоплений " + month + " месяца равна " + "%.2f",totalMoney);
+                System.out.println();
             }
 
         }
@@ -90,13 +90,14 @@ public class Main {
 
     public static void task6() {
         int percent = 7;
-        int totalMoney = 15_000;
+        double totalMoney = 15_000;
         int depositTime = 9 * 12;
-        int month = 1;
-        for (; month <= depositTime;month++ ) {
+        int mohth = 1;
+            for (; mohth <= depositTime;mohth++ ) {
             totalMoney = totalMoney + (totalMoney * percent / 100);
-            if (month % 6 == 0) {
-                System.out.println("Сумма накоплений " + month + " месяца равна " + totalMoney);
+            if (mohth % 6 == 0) {
+                System.out.printf("Сумма накоплений " + mohth + " месяца равна " + "%.2f",totalMoney);
+                System.out.println();
             }
 
         }
